@@ -12,7 +12,7 @@ const WelcomePage = props => (
         <div className={style.Center}>
           <img src={clanLogo} className={style.imageStyle} />
           <PageHeader>
-            5H1LD
+            [5H1LD]
           <br />
             <small>
               Strategic Head Infantery of Lovely Dudes
