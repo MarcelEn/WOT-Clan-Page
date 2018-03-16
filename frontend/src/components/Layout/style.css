@@ -1,0 +1,25 @@
+.Bar{
+ border-radius: 0px;
+ box-shadow: 0px 0px 10px black;
+ background: black; 
+ position: fixed;
+ width: 100%;
+ z-index: 10;
+}
+
+.Logo{
+    display: inline;
+    height: 45px;
+    transform: translate(0,-13px);
+}
+.Body{
+    z-index: 0;
+    width: 100%;
+    background: 'green';
+    position: absolute;
+    height: calc(100% - 50px);
+    top: 50px;
+}
+.BodyContent {
+    padding: 10px;
+}

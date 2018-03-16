@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
-import WelcomeToReact from '../../components/welcometoreact/WelcomeToReact.jsx';
+import WelcomePage from '../../components/WelcomePage/WelcomePage.jsx';
+import Layout from '../../components/Layout/Layout.jsx';
 
-import {actions} from '../../actions';
+import { actions } from '../../actions';
 
 class App extends Component {
-  render() {
-    return (
-        <WelcomeToReact 
-            message={this.props.ui.message}
-            fetchServerSideTime={this.props.fetchServerSideTime}
-            serverSideTime={this.props.data.serverSideTime}
-        />
-    );
-  }
+    render() {
+        return (
+            <Layout>
+                <WelcomePage />
+            </Layout>
+        );
+    }
 }
 
 function mapStateToProps(state) {
@@ -23,7 +22,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        fetchServerSideTime: () => {dispatch(actions.fetchServerSideTime())}
+        fetchServerSideTime: () => { dispatch(actions.fetchServerSideTime()) }
     }
 }
 
