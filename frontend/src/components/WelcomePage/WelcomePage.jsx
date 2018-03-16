@@ -17,7 +17,7 @@ const WelcomePage = props => (
             <small>
               Strategic Head Infantery of Lovely Dudes
             <br />
-              <strong>♥ We are the lovely dudes ♥</strong>
+              <strong>♥ We are the lovely Dudes ♥</strong>
             </small>
           </PageHeader>
         </div>
