@@ -20,6 +20,7 @@
     height: calc(100% - 50px);
     top: 50px;
 }
-.BodyContent {
-    padding: 10px;
+
+.BodyContent{
+    overflow-x: hidden;
 }

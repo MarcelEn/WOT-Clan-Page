@@ -6,3 +6,11 @@
 .Center{
     text-align: center;
 }
+
+.WallpaperBackground{
+    background-image: url('https://worldoftanks.eu/dcont/fb/media/wot_artwork_british_tank_destroyers.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 0px 20px black;
+}

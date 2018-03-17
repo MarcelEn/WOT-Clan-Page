@@ -5,10 +5,10 @@ import clanLogo from '../../images/clanlogo.png';
 
 
 const Footer = props => (
-  <Grid>
+  <Row>
     <hr />
     
-  </Grid>
+  </Row>
 )
 
 export default Footer;

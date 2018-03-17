@@ -7,10 +7,16 @@ import Footer from '../Footer/Footer.jsx';
 
 const WelcomePage = props => (
   <div>
-    <Grid>
+    <div className={style.WallpaperBackground}>
       <Row>
         <div className={style.Center}>
           <img src={clanLogo} className={style.imageStyle} />
+        </div>
+      </Row>
+    </div>
+    <Grid>
+      <Row>
+        <div className={style.Center}>
           <PageHeader>
             [5H1LD]
           <br />
@@ -73,11 +79,6 @@ const WelcomePage = props => (
     </Grid>
     <Footer />
   </div>
-  // <div>
-  //   <div className={}>
-  //     <img src={clanLogo} className={style.imageStyle} />
-  //   </div>
-  // </div>
 )
 
 export default WelcomePage;
