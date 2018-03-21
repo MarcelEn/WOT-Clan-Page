@@ -3,12 +3,14 @@ var router = express.Router();
 
 var routes = {
   index: '/',
+  login: '/login',
   time: '/time',
   all: '/*'
 }
 
 var apiMethods = {
-  time: require('../api/time')
+  time: require('../api/time'),
+  login: require('../api/login')
 }
 
 
@@ -22,7 +24,9 @@ router.all(routes.all, function (req, res, next) {
 });
 
 
-
+router.get(routes.login, function (req, res){
+  apiMethods.login(req, res);
+})
 
 
 router.get(routes.index, function (req, res, next) {

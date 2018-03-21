@@ -3,7 +3,7 @@ import { Navbar, NavItem, MenuItem, Nav, NavDropdown } from 'react-bootstrap';
 import style from './style.css';
 import clanLogo from '../../images/clanlogo.png';
 import { Scrollbars } from 'react-custom-scrollbars';
-
+import {getCookie} from '../../globalFunctions';
 
 const Layout = props => (
   <div>
@@ -35,9 +35,16 @@ const Layout = props => (
           </NavDropdown>
         </Nav>
         <Nav pullRight>
-          <NavItem eventKey={2} href="#">
-            Login (Coming Soon)
-      </NavItem>
+          
+          {
+            getCookie('access_token') === '' ?
+            //TODO: import the link for login and evaluate it
+            <NavItem eventKey={2} href="https://api.worldoftanks.eu/wot/auth/login/?application_id=7bb6be0bf4b5d8ad86e8074c13acf70e&redirect_uri=http%3A%2F%2Flocalhost%3A3000/api/login">Login</NavItem>
+            :
+            //TODO: Make this with an axios request and not by an a tag
+            <NavItem eventKey={2} href="/api/logout">Logout</NavItem>
+          }
+      
         </Nav>
       </Navbar.Collapse>
     </Navbar>

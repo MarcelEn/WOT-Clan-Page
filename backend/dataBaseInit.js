@@ -15,10 +15,10 @@ var connection = mysql.createConnection({
 var basicSql = [
     'DROP TABLE IF EXISTS member',
     'CREATE TABLE member(account_id int primary key, account_name varchar(255), joined_at int, role varchar(255))',
-    'CREATE TABLE IF NOT EXISTS accessTokens(access_token int primary key, account_id int, expires_at int)',
+    'CREATE TABLE IF NOT EXISTS accessTokens(access_token varchar(255) primary key, account_id int, expires_at int)',
 ]
 
-
+//TODO: remove expired Access Tokens from data base
 function convertSqlArraytoString(sql) {
     var newSql = '';
     for (var i = 0; i < sql.length; i++) {
@@ -50,7 +50,7 @@ function updateMembers(connection, callback) {
                     + '"' + member.account_name + '", '
                     + member.joined_at + ', '
                     + '"' + member.role + '")'
-                    
+
                 , () => {
                     count++;
                     if(count>=members.length){
